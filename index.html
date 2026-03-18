@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day.3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        body {
+             background-color: cyan;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%,-50%);
+             line-height: 1.7;
+            font-family: 'Arial', sans-serif;
+
+        }
+        .container {
+            width: 400px;
+            height: 350px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.356);
+            border-radius: 15px;
+        }
+        .all {
+            width: 400px;
+            height: 300px;
+            padding: 0 20px;
+            line-height: 2;
+        }
+        img {
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            margin-top: 15px;
+        }
+        .all {
+            border: solid 1px cyan;
+            background-color: cyan;
+            border-radius: 10px;
+        }
+        .small {
+            margin-top: 10px;
+            height: 500px;
+            background-color: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(15, 23, 42, 0.95);
+            padding-top: 30px;
+        }
+        .small:hover {
+            position: absolute;
+            top: -100;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.95);
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            padding-top: 40px;
+            border-radius: 10px;
+            
+        }
+        button {
+            padding: 10px 20px;
+            color: black;
+            border: rgba(245, 245, 245, 0.363) 1px solid;
+            border-radius: 5px;
+            margin-top: 15px
+            ;
+        }
+        .container:hover small {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="all">
+            <img src="data:image/webp;base64,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" alt="">
+            <h2>Creative Studio</h2>
+            <h5>Visual Design & Web Interaction</h5>
+            <p style="color: orange;">Search My Work</p>
+            <button>Hello World</button>
+        </div>
+        <div class="small">
+            <h2>Our Services</h2>
+            <ul>
+                <li>| UI/UX Design</li>
+                <li>| CSS Animations</li>
+                <li>| Web Development</li>
+            </ul>
+            <h6>Slide out to close</h6>
+        </div>
+    </div>
+</body>
+</html>
